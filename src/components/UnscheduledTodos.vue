@@ -17,6 +17,13 @@ function onSubmit(payload: { title: string; effort: string }) {
 function addTodo(todo: Todo) {
   todos.value.push(todo);
 }
+
+function deleteTodo(toBeRemoved: Todo) {
+  const index = todos.value.findIndex(
+    (todo) => todo.title === toBeRemoved.title
+  );
+  todos.value.splice(index, 1);
+}
 </script>
 
 <template>
@@ -31,6 +38,7 @@ function addTodo(todo: Todo) {
     <li v-for="todo in todos">
       <h2>
         <span>{{ todo.title }}</span> <span>{{ todo.timeEffort }}</span>
+        <button @click="deleteTodo(todo)">Delete</button>
       </h2>
     </li>
   </ul>
