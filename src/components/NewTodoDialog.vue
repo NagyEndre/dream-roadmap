@@ -2,6 +2,7 @@
 import { ref } from "vue";
 const dialogRef = ref();
 const title = ref();
+const duration = ref("00:30");
 
 const emit = defineEmits(["submit-new-todo"]);
 function showDialog() {
@@ -9,7 +10,7 @@ function showDialog() {
 }
 
 function onSubmit() {
-  emit("submit-new-todo", title.value);
+  emit("submit-new-todo", { title: title.value, effort: duration.value });
   dialogRef.value.close();
 }
 
@@ -22,15 +23,14 @@ defineExpose({ showDialog });
       <div>
         <label>
           Title:
-          <input
-            placeholder="Specify title"
-            :value="title"
-            @input="(event) => (title = event.target.value)"
-          />
+          <input placeholder="Specify title" v-model="title" />
         </label>
       </div>
       <div>
-        <label> Effort: <input type="time" /> </label>
+        <label>
+          Effort:
+          <input type="time" v-model="duration" />
+        </label>
       </div>
       <div>
         <button formmethod="dialog" value="NoReturnValue">Cancel</button>

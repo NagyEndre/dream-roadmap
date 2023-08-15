@@ -1,13 +1,23 @@
+# Personas
+
+- PC user
+- Mobile user
+- Developer
+
 # User stories
 
-- As a user I would like add quickly future todos in an unscheduled manner, so I can record them during rush hours.
+## New
+
+- As a user I would like to edit the title and effort estimation of the unscheduled todos, so I can further refine them at a later time.
+- As a user, I would like to a validation for the title (no empty title), so I can avoid to make a mess.
+- As a user, I would like to be able to delete a unscheduled todo, so I can remove irrelevant todos.
 - As I user I would like to schedule task, so I can plan ahead and be more productive.
 - As a user, I would like to view and edit my plans on my mobile, so I don't always have to use a laptop.
 - As a user, I would like to have the chance to undo my delete operation, so I can avoid accidental information loss.
 
-# Personas
+## Completed
 
--
+- As a user I would like add quickly future todos in an unscheduled manner, so I can record them during rush hours.
 
 # Vue 3 + TypeScript + Vite
 
