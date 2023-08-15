@@ -8,7 +8,8 @@
 
 ## New
 
-- As an advanced user, I would like to use keyboard to perform certain actions, so my usual productivity is kept.
+- As an advanced user, I would like to use enter to submit the new todo
+  , so my usual productivity is kept high.
 - As a user I would like to edit the title and effort estimation of the unscheduled todos, so I can further refine them at a later time.
 - As a user, I would like to a validation for the title (no empty title), so I can avoid to make a mess.
 - As I user I would like to schedule task, so I can plan ahead and be more productive.

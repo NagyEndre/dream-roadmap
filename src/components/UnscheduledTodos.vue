@@ -4,6 +4,10 @@ import NewTodoDialog from "./NewTodoDialog.vue";
 import { Todo } from "../models/Todo";
 
 const todos: Ref<Todo[]> = ref([]);
+todos.value.push(new Todo("car"));
+todos.value.push(new Todo("eye"));
+todos.value.push(new Todo("tea"));
+
 const newTodoDialog = ref();
 
 function openNewTodoDialog() {
@@ -27,21 +31,23 @@ function deleteTodo(toBeRemoved: Todo) {
 </script>
 
 <template>
-  <h1>Unscheduled todos</h1>
-  <NewTodoDialog
-    ref="newTodoDialog"
-    default-effort="00:30"
-    @submit-new-todo="onSubmit"
-  />
-  <button @click="openNewTodoDialog">+</button>
-  <ul>
-    <li v-for="todo in todos">
-      <h2>
-        <span>{{ todo.title }}</span> <span>{{ todo.timeEffort }}</span>
-        <button @click="deleteTodo(todo)">Delete</button>
-      </h2>
-    </li>
-  </ul>
+  <div>
+    <h2>Unscheduled todos</h2>
+    <button @click="openNewTodoDialog">+</button>
+    <NewTodoDialog
+      ref="newTodoDialog"
+      default-effort="00:30"
+      @submit-new-todo="onSubmit"
+    />
+    <ul>
+      <li v-for="todo in todos">
+        <h2>
+          <span>{{ todo.title }}</span> <span>{{ todo.timeEffort }}</span>
+          <button @click="deleteTodo(todo)">Delete</button>
+        </h2>
+      </li>
+    </ul>
+  </div>
 </template>
 
 <style scoped>
