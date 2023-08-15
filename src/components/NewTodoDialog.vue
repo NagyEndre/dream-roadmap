@@ -22,7 +22,7 @@ defineExpose({ showDialog });
 
 <template>
   <dialog ref="dialogRef">
-    <form>
+    <form @submit.prevent="onSubmit">
       <div>
         <label>
           Title:
@@ -37,9 +37,7 @@ defineExpose({ showDialog });
       </div>
       <div>
         <button formmethod="dialog" value="NoReturnValue">Cancel</button>
-        <button type="button" @click="onSubmit" value="MyReturnValue">
-          Create
-        </button>
+        <button type="submit" value="MyReturnValue">Create</button>
       </div>
     </form>
   </dialog>
