@@ -21,7 +21,11 @@ function addTodo(todo: Todo) {
 
 <template>
   <h1>Unscheduled todos</h1>
-  <NewTodoDialog ref="newTodoDialog" @submit-new-todo="onSubmit" />
+  <NewTodoDialog
+    ref="newTodoDialog"
+    default-effort="00:30"
+    @submit-new-todo="onSubmit"
+  />
   <button @click="openNewTodoDialog">+</button>
   <ul>
     <li v-for="todo in todos">

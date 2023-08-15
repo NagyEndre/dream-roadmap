@@ -1,10 +1,13 @@
 <script setup lang="ts">
 import { ref } from "vue";
+
+const props = defineProps(["defaultEffort"]);
+const emit = defineEmits(["submit-new-todo"]);
+
 const dialogRef = ref();
 const title = ref();
-const duration = ref("00:30");
+const duration = ref(props.defaultEffort);
 
-const emit = defineEmits(["submit-new-todo"]);
 function showDialog() {
   dialogRef.value.showModal();
 }
