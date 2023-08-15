@@ -29,11 +29,20 @@ function addTodo(todo: Todo) {
   <button @click="openNewTodoDialog">+</button>
   <ul>
     <li v-for="todo in todos">
-      <h2>{{ todo.title }}</h2>
-      <h3>{{ todo.timeEffort }}</h3>
+      <h2>
+        <span>{{ todo.title }}</span> <span>{{ todo.timeEffort }}</span>
+      </h2>
     </li>
   </ul>
 </template>
 
-<style scoped></style>
-../models/Todo
+<style scoped>
+ul {
+  list-style-type: decimal;
+}
+
+button {
+  background-color: royalblue;
+  color: white;
+}
+</style>
