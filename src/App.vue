@@ -2,7 +2,7 @@
   <div class="grid-container">
     <TheHeader class="grid-top" />
     <UnscheduledTodos class="grid-left" />
-    <TheCalendar class="grid-right" />
+    <TheCalendar :dayCountToDisplay="7" class="grid-right" />
   </div>
 </template>
 
