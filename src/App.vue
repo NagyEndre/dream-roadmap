@@ -1,23 +1,18 @@
 <script setup lang="ts">
 import UnscheduledTodos from "./components/UnscheduledTodos.vue";
 import TheCalendar from "./components/TheCalendar.vue";
+import TheHeader from "./components/TheHeader.vue";
 </script>
 
 <template>
   <div class="grid-container">
-    <h1 class="grid-top header">Dream Realizer</h1>
+    <TheHeader class="grid-top" />
     <UnscheduledTodos class="grid-left" />
     <TheCalendar class="grid-right calendar-style" />
   </div>
 </template>
 
 <style scoped>
-.header {
-  background-color: royalblue;
-  color: white;
-  margin-top: 0;
-  margin-bottom: 0;
-}
 .grid-container {
   display: grid;
   grid-template-columns: 30vw 70vw;
