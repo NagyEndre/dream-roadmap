@@ -1,9 +1,3 @@
-<script setup lang="ts">
-import UnscheduledTodos from "./components/UnscheduledTodos.vue";
-import TheCalendar from "./components/TheCalendar.vue";
-import TheHeader from "./components/TheHeader.vue";
-</script>
-
 <template>
   <div class="grid-container">
     <TheHeader class="grid-top" />
@@ -11,6 +5,12 @@ import TheHeader from "./components/TheHeader.vue";
     <TheCalendar class="grid-right" />
   </div>
 </template>
+
+<script setup lang="ts">
+import UnscheduledTodos from "./components/UnscheduledTodos.vue";
+import TheCalendar from "./components/TheCalendar.vue";
+import TheHeader from "./components/TheHeader.vue";
+</script>
 
 <style scoped>
 .grid-container {
