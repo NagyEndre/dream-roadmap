@@ -1,5 +1,5 @@
-<script setup lang="ts"></script>
-
 <template>
-  <h1>Calendar</h1>
+  <h1>TODO: Calendar</h1>
 </template>
+
+<script setup lang="ts"></script>

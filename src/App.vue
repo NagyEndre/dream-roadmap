@@ -1,14 +1,13 @@
 <script setup lang="ts">
 import UnscheduledTodos from "./components/UnscheduledTodos.vue";
+import TheCalendar from "./components/TheCalendar.vue";
 </script>
 
 <template>
   <div class="grid-container">
     <h1 class="grid-top header">Dream Realizer</h1>
     <UnscheduledTodos class="grid-left" />
-    <div class="grid-right calendar-style">
-      <h1>TODO: Calendar view</h1>
-    </div>
+    <TheCalendar class="grid-right calendar-style" />
   </div>
 </template>
 
