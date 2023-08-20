@@ -8,7 +8,7 @@ import TheHeader from "./components/TheHeader.vue";
   <div class="grid-container">
     <TheHeader class="grid-top" />
     <UnscheduledTodos class="grid-left" />
-    <TheCalendar class="grid-right calendar-style" />
+    <TheCalendar class="grid-right" />
   </div>
 </template>
 
@@ -36,9 +36,5 @@ import TheHeader from "./components/TheHeader.vue";
 .grid-right {
   grid-column-start: 2;
   grid-row-start: 2;
-}
-
-.calendar-style {
-  background-color: gainsboro;
 }
 </style>
