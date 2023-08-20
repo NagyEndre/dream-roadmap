@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { Ref, ref } from "vue";
 import NewTodoDialog from "./NewTodoDialog.vue";
+import TodoItem from "./TodoItem.vue";
 import { Todo } from "../models/Todo";
 
 const todos: Ref<Todo[]> = ref([]);
@@ -22,10 +23,8 @@ function addTodo(todo: Todo) {
   todos.value.push(todo);
 }
 
-function deleteTodo(toBeRemoved: Todo) {
-  const index = todos.value.findIndex(
-    (todo) => todo.title === toBeRemoved.title
-  );
+function deleteTodo(title: string) {
+  const index = todos.value.findIndex((todo) => todo.title === title);
   todos.value.splice(index, 1);
 }
 </script>
@@ -41,22 +40,17 @@ function deleteTodo(toBeRemoved: Todo) {
     />
     <ul>
       <li v-for="todo in todos">
-        <h2>
-          <span>{{ todo.title }}</span> <span>{{ todo.timeEffort }}</span>
-          <button @click="deleteTodo(todo)">Delete</button>
-        </h2>
+        <TodoItem
+          :title="todo.title"
+          :timeEffort="todo.timeEffort"
+          @delete-todo="deleteTodo"
+        />
       </li>
     </ul>
   </div>
 </template>
-
 <style scoped>
 ul {
   list-style-type: decimal;
-}
-
-button {
-  background-color: royalblue;
-  color: white;
 }
 </style>
