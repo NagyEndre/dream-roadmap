@@ -1,3 +1,24 @@
+<template>
+  <div>
+    <h2>Unscheduled todos</h2>
+    <button @click="openNewTodoDialog">+</button>
+    <NewTodoDialog
+      ref="newTodoDialog"
+      default-effort="00:30"
+      @submit-new-todo="onSubmit"
+    />
+    <ul>
+      <li v-for="todo in todos">
+        <TodoItem
+          :title="todo.title"
+          :timeEffort="todo.timeEffort"
+          @delete-todo="deleteTodo"
+        />
+      </li>
+    </ul>
+  </div>
+</template>
+
 <script setup lang="ts">
 import { Ref, ref } from "vue";
 import NewTodoDialog from "./NewTodoDialog.vue";
@@ -29,26 +50,6 @@ function deleteTodo(title: string) {
 }
 </script>
 
-<template>
-  <div>
-    <h2>Unscheduled todos</h2>
-    <button @click="openNewTodoDialog">+</button>
-    <NewTodoDialog
-      ref="newTodoDialog"
-      default-effort="00:30"
-      @submit-new-todo="onSubmit"
-    />
-    <ul>
-      <li v-for="todo in todos">
-        <TodoItem
-          :title="todo.title"
-          :timeEffort="todo.timeEffort"
-          @delete-todo="deleteTodo"
-        />
-      </li>
-    </ul>
-  </div>
-</template>
 <style scoped>
 ul {
   list-style-type: decimal;
