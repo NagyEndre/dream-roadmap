@@ -8,10 +8,13 @@
 
 ## New
 
+- As a developer I would like to configure unit testing, so I can develop with TDD approach.
+- As a developer I would like to configure E2E testing, so I can fully follow TDD and gain trust in the application.
+- As a developer I would like to create a current week display, so the app is prepared for scheduling features.
+- As I user I would like to schedule task, so I can plan ahead and be more productive.
 - As a user, I would like to rearrange my unscheduled todos, so I can prioritize them.
 - As a user I would like to edit the title and effort estimation of the unscheduled todos, so I can further refine them at a later time.
 - As a user, I would like to a validation for the title (no empty title), so I can avoid to make a mess.
-- As I user I would like to schedule task, so I can plan ahead and be more productive.
 - As a user, I would like to view and edit my plans on my mobile, so I don't always have to use a laptop.
 - As a user, I would like to have the chance to undo my delete operation, so I can avoid accidental information loss.
 
