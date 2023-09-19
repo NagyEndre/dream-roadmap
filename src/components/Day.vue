@@ -1,8 +1,15 @@
 <template>
-  <div class="day">Day</div>
+  <div class="day">Day {{ date }}</div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+defineProps({
+  date: {
+    type: Number,
+    required: true,
+  },
+});
+</script>
 
 <style scoped>
 .day {

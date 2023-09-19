@@ -3,7 +3,7 @@
     <h1>TODO: Calendar</h1>
     <div>
       <div class="week">
-        <Day v-for="index in props.dayCountToDisplay" />
+        <Day v-for="date in dates" :date="date"></Day>
       </div>
     </div>
   </div>
@@ -11,14 +11,35 @@
 
 <script setup lang="ts">
 import Day from "./Day.vue";
-const props = defineProps({
-  dayCountToDisplay: {
-    type: Number,
-    required: true,
-  },
-});
 
-// const today = "01.01.2023";
+enum Days {
+  Monday,
+  Tuesday,
+  Wednesday,
+  Thursday,
+  Friday,
+  Saturday,
+  Sunday,
+}
+
+function getWeekDates(): Days[] {
+  const date = new Date();
+  const dates = new Array<Days>(7);
+  const today = date.getDate();
+  const day = (date.getDay() + 6) % 7;
+
+  dates[day] = today;
+
+  for (let index = 0; index < dates.length; index++) {
+    if (index !== day) {
+      dates[index] = today + (index - day);
+    }
+  }
+
+  return dates;
+}
+
+const dates = getWeekDates();
 </script>
 
 <style scoped>
