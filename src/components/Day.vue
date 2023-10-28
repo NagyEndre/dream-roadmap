@@ -13,7 +13,8 @@ defineProps({
 
 <style scoped>
 .day {
-  background-color: cadetblue;
+  background-color: var(--color-primary-1);
   border: 1px dashed black;
+  color: var(--color-secondary);
 }
 </style>

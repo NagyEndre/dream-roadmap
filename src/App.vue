@@ -16,7 +16,7 @@ import TheHeader from "./components/TheHeader.vue";
 .grid-container {
   display: grid;
   grid-template-columns: 30vw 70vw;
-  grid-template-rows: 10vh 90vh;
+  grid-template-rows: 5vh 95vh;
   grid-template-rows:
     "header header"
     "unscheduled calendar";

@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="unscheduled-todos">
     <h2>Unscheduled todos</h2>
-    <button @click="openNewTodoDialog">+</button>
+    <button class="create-todo-button" @click="openNewTodoDialog">+</button>
     <NewTodoDialog
       ref="newTodoDialog"
       default-effort="00:30"
@@ -53,5 +53,11 @@ function deleteTodo(title: string) {
 <style scoped>
 ul {
   list-style-type: decimal;
+}
+.unscheduled-todos {
+  background-color: var(--color-secondary-1);
+}
+.create-todo-button {
+  background-color: var(--color-highlight);
 }
 </style>

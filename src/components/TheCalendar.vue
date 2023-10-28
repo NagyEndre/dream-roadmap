@@ -44,7 +44,7 @@ const dates = getWeekDates();
 
 <style scoped>
 .calendar-style {
-  background-color: gainsboro;
+  background-color: var(--color-primary-2);
   margin: 0;
 }
 
