@@ -11,5 +11,6 @@
   margin-bottom: 0;
   align-self: center;
   vertical-align: center;
+  font-family: Marker-Felt;
 }
 </style>
