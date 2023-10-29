@@ -1,6 +1,5 @@
 <template>
   <div class="calendar-style">
-    <h1>TODO: Calendar</h1>
     <div class="week">
       <Day v-for="date in dates" :date="date"></Day>
     </div>
