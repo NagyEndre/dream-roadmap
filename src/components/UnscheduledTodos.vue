@@ -56,6 +56,8 @@ ul {
 }
 .unscheduled-todos {
   background-color: var(--color-ternary);
+  border-radius: 0rem 1rem 1rem 0;
+  box-shadow: inset -5px 5px 15px -5px var(--color-contrast);
 }
 .create-todo-button {
   background-color: var(--color-highlight);

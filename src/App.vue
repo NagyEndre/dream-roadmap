@@ -14,6 +14,7 @@ import TheHeader from "./components/TheHeader.vue";
 
 <style scoped>
 .grid-container {
+  background-color: var(--color-ternary-1);
   display: grid;
   grid-template-columns: 30vw 70vw;
   grid-template-rows: 5vh 95vh;
