@@ -18,6 +18,11 @@
   --color-secondary: yellow;
   --color-secondary-1: rgb(248, 248, 67);
   --color-secondary-2: rgb(245, 245, 120);
+  --color-ternary: black;
+  --color-ternary-1: rgb(71, 71, 71);
+  --color-ternary-2: rgb(120, 120, 120);
+  --color-contrast: whitesmoke;
+
   --color-highlight: royalblue;
 }
 
@@ -65,7 +70,7 @@ button:focus-visible {
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
+    color: var(--color-contrast);
     background-color: #ffffff;
   }
   a:hover {

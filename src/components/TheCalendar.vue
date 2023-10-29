@@ -44,7 +44,8 @@ const dates = getWeekDates();
 
 <style scoped>
 .calendar-style {
-  background-color: var(--color-primary-2);
+  background-color: var(--color-ternary-1);
+  color: var(--color-contrast);
   margin: 0;
 }
 

@@ -55,7 +55,7 @@ ul {
   list-style-type: decimal;
 }
 .unscheduled-todos {
-  background-color: var(--color-secondary-1);
+  background-color: var(--color-ternary);
 }
 .create-todo-button {
   background-color: var(--color-highlight);
