@@ -1,10 +1,8 @@
 <template>
   <div class="calendar-style">
     <h1>TODO: Calendar</h1>
-    <div>
-      <div class="week">
-        <Day v-for="date in dates" :date="date"></Day>
-      </div>
+    <div class="week">
+      <Day v-for="date in dates" :date="date"></Day>
     </div>
   </div>
 </template>
@@ -51,6 +49,7 @@ const dates = getWeekDates();
 
 .week {
   display: grid;
+  height: 100%;
   grid-template-columns: repeat(7, 1fr);
 }
 </style>
