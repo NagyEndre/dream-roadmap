@@ -7,15 +7,17 @@
       default-effort="00:30"
       @submit-new-todo="onSubmit"
     />
-    <ul>
-      <li v-for="todo in todos">
-        <TodoItem
-          :title="todo.title"
-          :timeEffort="todo.timeEffort"
-          @delete-todo="deleteTodo"
-        />
-      </li>
-    </ul>
+    <draggable v-model="todos" tag="ul">
+      <template #item="{ element: todo }">
+        <li>
+          <TodoItem
+            :title="todo.title"
+            :timeEffort="todo.timeEffort"
+            @delete-todo="deleteTodo"
+          />
+        </li>
+      </template>
+    </draggable>
   </div>
 </template>
 
@@ -24,6 +26,7 @@ import { Ref, ref } from "vue";
 import NewTodoDialog from "./NewTodoDialog.vue";
 import TodoItem from "./TodoItem.vue";
 import { Todo } from "../models/Todo";
+import draggable from "vuedraggable";
 
 const todos: Ref<Todo[]> = ref([]);
 todos.value.push(new Todo("car"));
