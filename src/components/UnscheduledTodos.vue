@@ -7,7 +7,12 @@
       default-effort="00:30"
       @submit-new-todo="onSubmit"
     />
-    <draggable v-model="todos" tag="ul">
+    <draggable
+      v-model="todos"
+      tag="transition-group"
+      v-bind="dragOptions"
+      :component-data="{ tag: 'ul' }"
+    >
       <template #item="{ element: todo }">
         <li>
           <TodoItem
@@ -22,7 +27,7 @@
 </template>
 
 <script setup lang="ts">
-import { Ref, ref } from "vue";
+import { Ref, ref, reactive } from "vue";
 import NewTodoDialog from "./NewTodoDialog.vue";
 import TodoItem from "./TodoItem.vue";
 import { Todo } from "../models/Todo";
@@ -32,6 +37,8 @@ const todos: Ref<Todo[]> = ref([]);
 todos.value.push(new Todo("car"));
 todos.value.push(new Todo("eye"));
 todos.value.push(new Todo("tea"));
+
+const dragOptions = reactive({ animation: 300, ghostClass: "ghost" });
 
 const newTodoDialog = ref();
 
@@ -54,6 +61,10 @@ function deleteTodo(title: string) {
 </script>
 
 <style scoped>
+.ghost {
+  opacity: 0.8;
+  background: var(--color-secondary);
+}
 ul {
   list-style-type: decimal;
 }
