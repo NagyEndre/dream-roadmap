@@ -46,7 +46,7 @@ const layout = ref([
 }
 .grid::before {
   content: "";
-  background-size: calc(calc(100% - 5px) / 7) 50px;
+  background-size: calc(calc(100% - 5px) / 7) 60px;
   background-image: linear-gradient(to right, lightgrey 1px, transparent 1px),
     linear-gradient(to bottom, lightgrey 1px, transparent 1px);
   height: calc(100% - 5px);
