@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "vue": "^3.3.4",
+    "vue3-grid-layout-next": "^1.0.7",
     "vuedraggable": "^4.1.0"
   },
   "devDependencies": {
