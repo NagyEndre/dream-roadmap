@@ -1,3 +1,7 @@
+# About
+
+The DreamRealizer aims to provide a platform where one can organize todos conveniently.
+
 # Personas
 
 - PC user
