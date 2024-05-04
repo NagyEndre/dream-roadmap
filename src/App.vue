@@ -3,13 +3,11 @@
     <TheHeader class="grid-top" />
     <UnscheduledTodos class="grid-left" />
     <Calendar class="grid-right" />
-    <!-- <TheCalendar :dayCountToDisplay="7" class="grid-right" /> -->
   </div>
 </template>
 
 <script setup lang="ts">
 import UnscheduledTodos from "./components/UnscheduledTodos.vue";
-import TheCalendar from "./components/TheCalendar.vue";
 import Calendar from "./components/Calendar.vue";
 import TheHeader from "./components/TheHeader.vue";
 </script>

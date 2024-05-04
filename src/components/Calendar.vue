@@ -26,15 +26,10 @@
 import { ref } from "vue";
 import { GridLayout, GridItem } from "vue3-grid-layout-next";
 
-const responsive = ref(true);
 const layout = ref([
   { x: 0, y: 0, w: 1, h: 1, i: "0" },
   { x: 2, y: 0, w: 1, h: 2, i: "1" },
 ]);
-// const layout = reactive([]) // will cause some bug
-
-// it will work, when responsive is false
-// const layout = reactive([])
 </script>
 
 <style>
@@ -46,12 +41,13 @@ const layout = ref([
 }
 .grid::before {
   content: "";
+  position: absolute;
+  left: 0px;
   background-size: calc(calc(100% - 5px) / 7) 60px;
   background-image: linear-gradient(to right, lightgrey 1px, transparent 1px),
     linear-gradient(to bottom, lightgrey 1px, transparent 1px);
   height: calc(100% - 5px);
   width: calc(100% - 5px);
-  position: absolute;
   background-repeat: repeat;
   margin: 5px;
 }
