@@ -4,7 +4,7 @@
     class="grid"
     :colNum="7"
     :vertical-compact="false"
-    :maxRows="8"
+    :maxRows="12"
     :rowHeight="50"
   >
     <GridItem
@@ -46,7 +46,7 @@ const layout = ref([
   background-size: calc(calc(100% - 5px) / 7) 60px;
   background-image: linear-gradient(to right, lightgrey 1px, transparent 1px),
     linear-gradient(to bottom, lightgrey 1px, transparent 1px);
-  height: calc(100% - 5px);
+  height: calc(100% - 9px);
   width: calc(100% - 5px);
   background-repeat: repeat;
   margin: 5px;
